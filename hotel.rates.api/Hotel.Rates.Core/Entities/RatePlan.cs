@@ -1,0 +1,25 @@
+﻿using System.Collections.Generic;
+
+namespace Hotel.Rates.Core.Entities
+{
+    public class RatePlan
+    {
+        public RatePlan()
+        {
+            Seasons = new List<Season>();
+            RatePlanRooms = new List<RatePlanRoom>();
+        }
+
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
+        public int RatePlanType { get; set; }
+
+        public double Price { get; set; }
+
+        public ICollection<Season> Seasons { get; set; }
+
+        public ICollection<RatePlanRoom> RatePlanRooms { get; set; }
+    }
+}
